@@ -27,3 +27,13 @@
   <a href="/images"><img class="single-img" src="{{img_src}}"/></a>
 </div>
   </template>
+
+
+<template name="navbar">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+   {{> loginButtons}}
+  </div>
+</nav>
+{{>image_add_form}}
+</template>
