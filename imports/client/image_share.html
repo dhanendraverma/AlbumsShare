@@ -37,3 +37,34 @@
 </nav>
 {{>image_add_form}}
 </template>
+
+
+<template name="image_add_form">
+
+<div class="modal fade" id="image_add_form">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+        </div>
+      </div>
+      <div class="modal-body">
+        <form class="js-add-image">
+          <div class="form-group">
+            <label for="img_src">Image URL:</label>
+            <input type="text" class="form-control" id="img_src" placeholder="url" name="img_src"/>
+        </div>
+        <div class="form-group">
+         <label for="img_alt">Image description:</label>
+          <textarea class="form-control" id="img_alt" placeholder="Describe the image here" name="img_alt"></textarea>
+        </div>
+          <button class="btn btn-success">save</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-warning" data-dismiss="modal">cancel</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</template>
