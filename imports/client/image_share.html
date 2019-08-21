@@ -74,6 +74,11 @@
   {{#if currentUser}}
   <button class="btn btn-success js-show-image-form">add image</button>
   {{/if}}
+   <h2>
+   {{#if filtering_images}}
+    Showing images by user {{getFilterUser}}. <a href="#" class="js-unset-image-filter">Show all images</a>
+   {{/if}}
+  </h2>
 
 </div><!-- / container -->
 </template>
