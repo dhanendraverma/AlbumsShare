@@ -28,7 +28,6 @@
 </div>
   </template>
 
-
 <template name="navbar">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -38,8 +37,8 @@
 {{>image_add_form}}
 </template>
 
-
 <template name="image_add_form">
+
 <div class="modal fade" id="image_add_form">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -67,7 +66,7 @@
     </div>
   </div>
 </template>
- 
+
 <template name="images">
     <div class="container js-container" >
 
@@ -79,6 +78,31 @@
     Showing images by user {{getFilterUser}}. <a href="#" class="js-unset-image-filter">Show all images</a>
    {{/if}}
   </h2>
+  <div class="row">
+  {{#each images}}
+  <div class="col-xs-12 col-md-3" id="{{_id}}">
+    <div class="thumbnail">
 
+      <a href="/image/{{_id}}"><img class="js-image thumbnail-img"  src="{{img_src}}"
+      alt="{{img_alt}}" /></a>
+
+      <div class="caption">
+             <h3>Rating: {{rating}}</h3>
+
+          <p>{{img_alt}}</p>
+          <p>
+            User:
+            <a href="#" class="js-set-image-filter">{{getUser createdBy}}</a>
+          </p>
+          <p>
+            {{>starsRating mutable=true class="js-rate-image" data_id=_id rating=ratingh}}
+          </p>
+
+           <button class="js-del-image btn btn-warning">delete</button>
+      </div>
+     </div>
+    </div> <!-- / col -->
+  {{/each}}
+</div> <!-- / row -->
 </div><!-- / container -->
-</template>
+  </template>
