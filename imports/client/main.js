@@ -56,3 +56,14 @@ if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
 }
 
 })
+
+
+
+
+/// accounts config
+
+Accounts.ui.config({
+passwordSignupFields: "USERNAME_AND_EMAIL"
+});
+
+///
